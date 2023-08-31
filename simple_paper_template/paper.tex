@@ -1,0 +1,91 @@
+\documentclass[letterpaper,twocolumn,10pt]{article}
+% placeholder style
+\usepackage{usenix-2020-09}
+
+\usepackage{graphicx} % For figures
+\DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg} % For figures
+\graphicspath{{figures/}} % paths to graphics folders
+\usepackage{amsmath, amssymb} % Math symbols
+\usepackage{booktabs} % For formal tables
+\usepackage{multirow}
+\usepackage{balance} % Balance references
+\usepackage{xspace} % Spacing
+\usepackage{hyperref} % Hyperlinks
+\usepackage{cite} % Citations
+\usepackage{array} % Pretty tables
+
+
+
+\pagenumbering{gobble} % Removes page numbers
+
+
+
+
+\input{misc/custom_commands}
+
+% PDF Metadata
+\hypersetup{%
+  pdfauthor={Anonymous Authors},
+  pdftitle={Title},
+  pdfkeywords={privacy; minors; advertising}
+  pdfdisplaydoctitle=true, % For Accessibility
+  bookmarksnumbered,
+  pdfstartview={FitH},
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black,
+  breaklinks=true,
+  hypertexnames=false
+}
+
+\begin{document}
+\month=1 \day=1 \year=2001 % 
+%don't want date printed
+\date{}
+
+% make title bold and 14 pt font (Latex default is non-bold, 16 pt)
+\title{\Large \bf Targeting Minors}
+
+
+
+
+\author{
+  {\rm Anonymous Authors}\\
+%  {emails}\\
+%  Carnegie Mellon University\\
+}
+
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract
+\begin{abstract}
+\input{sections/00-abstract}
+\end{abstract}
+
+
+
+\input{sections/10-intro}
+\input{sections/20-relwork}
+\input{sections/30-methods}
+\input{sections/40-results}
+\input{sections/50-discussion}
+
+\input{sections/60-acks}
+
+
+
+\balance
+
+\bibliographystyle{plain}
+\bibliography{misc/bibliography.bib}
+
+\appendix
+\onecolumn
+\input{sections/99-appendix}
+
+
+% that's all folks
+\end{document}
