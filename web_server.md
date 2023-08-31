@@ -27,12 +27,12 @@ Ok. Now let's get an HTTPS certificate for your server using Let's Encrypt. Run 
 
 https://www.internalpointers.com/post/right-folder-permission-website
 
-sudo chown -R <username> /var/www/
-sudo addgroup <group_name>
+sudo chown -R [username] /var/www/
+sudo addgroup [group_name]
 
-sudo usermod -a -G <groupName> <userName>
+sudo usermod -a -G [groupName] <userName>
 
-chgrp -R <group_name> /var/www/
+chgrp -R [group_name] /var/www/
 
 chmod -R 755 /var/www/
 
@@ -49,7 +49,7 @@ sudo -u postgres psql
 psql <- start
 \q stop
 
-\c <database> <- pick database
+\c [database] <- pick database
 
 
 
@@ -63,10 +63,8 @@ SELECT * FROM reddit LIMIT 1;
 
 
 
-CREATE USER <user> WITH ENCRYPTED PASSWORD '<password>';
-GRANT INSERT, UPDATE ON <table> TO <user>;
+CREATE USER [user] WITH ENCRYPTED PASSWORD '[password]';
+GRANT INSERT, UPDATE ON [table] TO [user];
 
-
-CREATE USER <user> WITH ENCRYPTED PASSWORD '<password>';
-GRANT SELECT ON <table> TO <user>;
+GRANT SELECT ON [table] TO [user];
 
