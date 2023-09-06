@@ -57,11 +57,12 @@ SELECT count(*) FROM new_reddit;
 SELECT * FROM reddit LIMIT 1;
 
 
-#DELETE FROM reddit;
+#DELETE * FROM reddit;
+DROP TABLE tblname;
 
 \dt <- list tables
 
-
+sudo -u postgres psql
 
 CREATE USER [user] WITH ENCRYPTED PASSWORD '[password]';
 GRANT INSERT, UPDATE ON [table] TO [user];
