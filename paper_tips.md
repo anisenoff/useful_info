@@ -22,3 +22,18 @@ Get the code for the fixing the front errors (breach)
 ```\noindent \textit{Question was only shown if participant selected ``No'' or ``Don't know'' in response to Q1}```
 
 ```\textit{(participants could select multiple options)}```
+
+## Tables
+
+### Multiple Rows in a Table Cell
+* Nested Tabular
+* Short stack
+* p column style with \newline
+
+
+### Multiclo/row
+
+```
+\usepackage{multirow}
+\multirow{ 2}{*}{Text}
+```
