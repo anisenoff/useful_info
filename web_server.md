@@ -42,6 +42,10 @@ https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql
 https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e
 
 
+
+sudo apt-get install php-pgsql 
+^ and restart so that it can actually connect to the database
+
 sudo -u postgres psql
 
 
