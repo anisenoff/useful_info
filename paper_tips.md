@@ -31,9 +31,23 @@ Get the code for the fixing the front errors (breach)
 * p column style with \newline
 
 
-### Multiclo/row
+### Multicol/row
 
 ```
 \usepackage{multirow}
 \multirow{ 2}{*}{Text}
 ```
+
+### Random Symbols
+*Quotations* ``` \`\`quote'' ```  or ``` \`quote' ``` use grave \` for left quote and ' for right quote
+
+*e.g.* ``` e\,g\,. ```
+
+~ is just a space that won't allow a line break. Use in situations like ```5~cats``` ```text~\cite{citation}``` or ```Section~\ref{sec:}
+
+
+### New commands
+todo
+
+### Citations and Refs
+todo
