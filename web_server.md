@@ -37,7 +37,7 @@ chgrp -R [group_name] /var/www/
 chmod -R 755 /var/www/
 
 
-### Database
+### Database (Postgress)
 https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-linux/
 https://medium.com/coding-blocks/creating-user-database-and-adding-access-on-postgresql-8bfcd2f4a91e
 
@@ -72,4 +72,7 @@ CREATE USER [user] WITH ENCRYPTED PASSWORD '[password]';
 GRANT INSERT, UPDATE ON [table] TO [user];
 
 GRANT SELECT ON [table] TO [user];
+
+For large databased you will want to use indexes (abt col(s) and make retrieving them faster)
+https://www.postgresql.org/docs/current/indexes.html
 
