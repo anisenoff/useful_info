@@ -73,6 +73,8 @@ GRANT INSERT, UPDATE ON [table] TO [user];
 
 GRANT SELECT ON [table] TO [user];
 
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO [user];
+
 For large databased you will want to use indexes (abt col(s) and make retrieving them faster)
 https://www.postgresql.org/docs/current/indexes.html
 
