@@ -51,3 +51,13 @@ todo
 
 ### Citations and Refs
 todo
+
+
+### Useful Packages
+\usepackage{balance} % Balance references
+\usepackage{xspace} % Spacing
+\usepackage{hyperref} % Hyperlinks
+\usepackage{cite} % Citations
+\usepackage{array} % Pretty tables
+\usepackage{verbatim} % block comments
+
