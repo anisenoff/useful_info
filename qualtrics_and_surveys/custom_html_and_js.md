@@ -85,6 +85,13 @@ Note: The index does not refer to the index that the option appears in the list 
 *Hide a question*
 <code>jQuery(“#”+this.questionId).hide();</code>
 
+*Hide next button*
+<code>
+Qualtrics.SurveyEngine.addOnReady(function () {
+$('NextButton').hide();
+});
+</code>
+
 Hiding a question combined with using JS to select/deselect options is a good way of only presenting a user with specific options based on JavaScript.
 
 
