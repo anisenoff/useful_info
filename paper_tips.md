@@ -2,6 +2,10 @@ Fixing Overleaf Wordcount: https://www.overleaf.com/learn/how-to/Is_there_a_way_
 
 Get the code for the fixing the front errors (breach)
 
+## Alt text (from Maxi)
+I always use the \Description tag as also advised in the ACM guide:
+The command \Description[<short description>]{<long description>} should be placed inside every Figure and can also be used for Tables to provide an overview of the structure of a complex table. The short description is optional.
+Source: https://authors.acm.org/proceedings/production-information/describing-figures
 
 
 ## Notes on survey formatting
