@@ -72,7 +72,7 @@ document.getElementById("id2").addEventListener("change", function(){ your js co
 
 *Setting Embedded Data*
 <code>
-Qualtrics.SurveyEngine.setEmbeddedData("<embedded_data_variable_name>", <data>);
+Qualtrics.SurveyEngine.setEmbeddedData("<embedded_data_variable_name>", <value to set>);
 </code>
 
 This can be very useful if you want to do branching logic in the survey flow based on a decision you make using javascript. It is also a way to save information that you derive with JS along with the participant’s other responses.
