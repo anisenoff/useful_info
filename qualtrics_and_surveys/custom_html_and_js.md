@@ -67,12 +67,12 @@ document.getElementById("id2").addEventListener("change", function(){ your js co
 ## Useful Qualtrics JS Commands
 
 *Read Embedded Data*
-<code>var <js variable_name> = Qualtrics.SurveyEngine.getEmbeddedData(‘<embedded data variable name>’);
+<code>var <js variable_name> = Qualtrics.SurveyEngine.getEmbeddedData('<embedded data variable name>');
 </code>
 
 *Setting Embedded Data*
 <code>
-Qualtrics.SurveyEngine.setEmbeddedData("<embedded_data_variable_name>", <data>;
+Qualtrics.SurveyEngine.setEmbeddedData("<embedded_data_variable_name>", <data>);
 </code>
 
 This can be very useful if you want to do branching logic in the survey flow based on a decision you make using javascript. It is also a way to save information that you derive with JS along with the participant’s other responses.
@@ -129,5 +129,5 @@ It is worth noting that Qualtrics has its own built-in style sheet. By default, 
 
 # TODO
 - validate matrix
-- can't use format strings
+- can't use format strings!!!!!
 - iframes
