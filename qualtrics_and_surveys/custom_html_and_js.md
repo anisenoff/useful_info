@@ -105,6 +105,18 @@ jQuery.getScript( “<url to script>",function(){
 
 
 
+insert this into the js for the question
+<code>
+document.getElementById("[insert html id here]").innerHTML = Qualtrics.SurveyEngine.getEmbeddedData("<embedded_data_variable_name>");
+</code>
+
+
+insert this into html view of question
+<code>
+	<span id="[insert html id here]"></span>
+</code>
+
+
 <u>Testing</u>
 
 You can test your JS in the same way you check your HTML (using preview or taking the survey). Be warned, if your JS depends on a URL parameter it will not be set if you are just testing it in a preview.
