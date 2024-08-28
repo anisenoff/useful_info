@@ -67,3 +67,11 @@ todo
 \usepackage{array} % Pretty tables
 \usepackage{verbatim} % block comments
 
+
+
+
+
+#### Footnotes
+
+\nicolasc{typographical nit: I believe that the US English standard is punctuation, then footnote (glued to the punctuation, i.e., \texttt{$\backslash$footnote\{something\}})}
+
