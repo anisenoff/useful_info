@@ -30,7 +30,7 @@ As was mentioned in the previous edition you cannot put any of your JavaScript d
 The first place that you can add JS directly to a question. With the old interface, you can click on the gear to the left of the question and click “Add JavaScript…”
 
 Once you click on this screen you will see the following code block
-<code>
+````{JavaScript}
 Qualtrics.SurveyEngine.addOnload(function()
 {
 	/*Place your JavaScript here to run when the page loads*/
@@ -48,7 +48,7 @@ Qualtrics.SurveyEngine.addOnUnload(function()
 	/*Place your JavaScript here to run when the page is unloaded*/
 
 });
-</code>
+````
 
 The comments tell you when each of the functions will run. I usually put my code into the addOnReady function. 
 
@@ -57,45 +57,69 @@ In the old interface, once you have added JS to a question a black square that s
 
 Since you can’t just directly add JavaScript to your HTML if you want functions to run when some event happens you can use event listeners. I included some examples below. Usually, this just means that you should add ids to your HTML elements so you can more easily add your event listeners later on. In general, you need to write out “jQuery” instead of using “$”.
 
-<code>
+````{JavaScript}
 document.getElementById("id1").addEventListener("click", function(){ your js code here });
 document.getElementById("id2").addEventListener("change", function(){ your js code here });
 
 
-</code>
+````
 
 ## Useful Qualtrics JS Commands
 
 *Read Embedded Data*
-<code>var <js variable_name> = Qualtrics.SurveyEngine.getEmbeddedData(‘<embedded data variable name>’);
-</code>
+````{JavaScript}
+var <js variable_name> = Qualtrics.SurveyEngine.getEmbeddedData('<embedded data variable name>');
+````
 
 *Setting Embedded Data*
-<code>
-Qualtrics.SurveyEngine.setEmbeddedData("<embedded_data_variable_name>", <data>;
-</code>
+````{JavaScript}
+Qualtrics.SurveyEngine.setEmbeddedData("<embedded_data_variable_name>", <value to set>);
+````
 
 This can be very useful if you want to do branching logic in the survey flow based on a decision you make using javascript. It is also a way to save information that you derive with JS along with the participant’s other responses.
 
 *Using JS to select/deselect an option in a question*
-<code>var err_occured = this.setChoiceValue(<index>, <true or false>);</code>
+````{JavaScript}
+var err_occured = this.setChoiceValue(<index>, <true or false>);
+````
 Note: The index does not refer to the index that the option appears in the list of options. To determine the index of the option you want to select/deselect try using Piped Text to display the option the last number inside of the curly brackets is the index you want to use.
 
 
 *Hide a question*
-<code>jQuery(“#”+this.questionId).hide();</code>
+````{JavaScript}
+jQuery(“#”+this.questionId).hide();
+````
+
+*Hide next button*
+````{JavaScript}
+Qualtrics.SurveyEngine.addOnReady(function () {
+$('NextButton').hide();
+});
+````
 
 Hiding a question combined with using JS to select/deselect options is a good way of only presenting a user with specific options based on JavaScript.
 
 
 ==== External JavaScript ====
 There are several ways to include external scripts putting this into the javascript for a question is one way of doing it. There also seem to be ways of including an external JavaScript file so that it can be used for any/all of the questions in your survey, but I have not been able to get it to work.
-<code>
+````{JavaScript}
 jQuery.getScript( “<url to script>",function(){
 	/* your JavaScript code here */	
 	});
-</code>
+````
 
+
+
+insert this into the js for the question
+````{JavaScript}
+document.getElementById("[insert html id here]").innerHTML = Qualtrics.SurveyEngine.getEmbeddedData("<embedded_data_variable_name>");
+````
+
+
+insert this into html view of the question
+````{JavaScript}
+	<span id="[insert html id here]"></span>
+````
 
 
 <u>Testing</u>
@@ -117,8 +141,9 @@ For options 2 and 3 go to the “Look and Feel” tab. In that tab click on “S
 
 It is worth noting that Qualtrics has its own built-in style sheet. By default, it does things like hiding custom radio and checkboxes. In my own experience, the way to make those custom elements show up again is to add the style attribute directly to the element that is being hidden by Qualtrics (putting it in the Custom CSS block didn’t work for me). The code snippet below shows the style attribute that I use to show hidden radio buttons. In my case, I also had to add the “position:relative” attribute to the element that was next to my radio button so they wouldn’t overlap.
 
-<code>style="display: visible; opacity: 100; position:relative;"</code>
-
+````{HTML}
+style="display: visible; opacity: 100; position:relative;"</code>
+````
 
 ## Matrix Validation one per column
 
@@ -131,5 +156,6 @@ It is worth noting that Qualtrics has its own built-in style sheet. By default, 
 
 
 # TODO
-- can't use format strings
+- validate matrix
+- can't use format strings!!!!!
 - iframes

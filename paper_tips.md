@@ -2,6 +2,10 @@ Fixing Overleaf Wordcount: https://www.overleaf.com/learn/how-to/Is_there_a_way_
 
 Get the code for the fixing the front errors (breach)
 
+## Alt text (from Maxi)
+I always use the \Description tag as also advised in the ACM guide:
+The command \Description[<short description>]{<long description>} should be placed inside every Figure and can also be used for Tables to provide an overview of the structure of a complex table. The short description is optional.
+Source: https://authors.acm.org/proceedings/production-information/describing-figures
 
 
 ## Notes on survey formatting
@@ -10,6 +14,8 @@ Get the code for the fixing the front errors (breach)
  ```\noindent \textbf{Q1:}```
 
 ```
+\usepackage{enumitem}
+
 \begin{itemize}[noitemsep,topsep=0pt]
     \item Yes
     \item No
@@ -31,9 +37,41 @@ Get the code for the fixing the front errors (breach)
 * p column style with \newline
 
 
-### Multiclo/row
+### Multicol/row
 
 ```
 \usepackage{multirow}
 \multirow{ 2}{*}{Text}
 ```
+
+### Random Symbols
+*Quotations* ``` \`\`quote'' ```  or ``` \`quote' ``` use grave \` for left quote and ' for right quote
+
+*e.g.* ``` e\,g\,. ```
+
+~ is just a space that won't allow a line break. Use in situations like ```5~cats``` ```text~\cite{citation}``` or ```Section~\ref{sec:}
+
+
+### New commands
+todo
+
+### Citations and Refs
+todo
+
+
+### Useful Packages
+\usepackage{balance} % Balance references
+\usepackage{xspace} % Spacing
+\usepackage{hyperref} % Hyperlinks
+\usepackage{cite} % Citations
+\usepackage{array} % Pretty tables
+\usepackage{verbatim} % block comments
+
+
+
+
+
+#### Footnotes
+
+\nicolasc{typographical nit: I believe that the US English standard is punctuation, then footnote (glued to the punctuation, i.e., \texttt{$\backslash$footnote\{something\}})}
+
