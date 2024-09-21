@@ -120,7 +120,16 @@ It is worth noting that Qualtrics has its own built-in style sheet. By default, 
 <code>style="display: visible; opacity: 100; position:relative;"</code>
 
 
+## Matrix Validation one per column
+
+![Question](../img/Matrix_Val_Question.png)
+![Options](../img/Matrix_Val_Opt.png)
+![Validation](../img/Matrix_Val_Custom.png)
+
+
+
+
+
 # TODO
-- validate matrix
 - can't use format strings
 - iframes
