@@ -1,1 +1,4 @@
+https://ubuntu.com/tutorials/install-ubuntu-desktop#4-boot-from-usb-flash-drive
+
+
 getonline.cmu.edu
